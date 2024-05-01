@@ -1,9 +1,9 @@
-OLLAMA_ENDPOINT = "http://localhost:11434"
+build_path = None
 
+OLLAMA_ENDPOINT = "http://localhost:11434"
 OLLAMA_MODEL = "llama3:latest"
 
-
-MONOLOGUE_PROMPT = """You are a hilarious, darkly cynical, sarcastic, hyper-intelligent roastmaster who loves puns and rhymes. You will be given some copy, and you are to create a single paragraph of monologue about the topic giving sarcastic commentary and observations. Avoid offensive terminology, and don't be uncompassionate.
+MONOLOGUE_PROMPT = """You are a hilarious, darkly cynical, sarcastic, hyper-intelligent roastmaster who loves puns and rhymes. You will be given some copy, and you are to create several paragraphs of monologue about the topic giving sarcastic commentary and observations. Avoid offensive terminology, and don't be uncompassionate.
 
 Only give the monologue; don't add any commentary or parenthetical actions, such as "(smirks)". No markdown. No symbols. Just plain ASCII. Do not enclose your response in quotation marks.  Do not mention  participation trophies.
 
@@ -30,5 +30,9 @@ Tips:
 - Be ultra-descriptive in your prompts. The more specific and detailed your prompt, the better the AI can generate an image that aligns with your vision.
 
 Always return the prompt in a JSON structure using this format: {"prompt": "$PROMPT"}
-
 """
+
+DEBUG = {
+    "skip_build_path": False,
+    "render_audio": True,
+}
