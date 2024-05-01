@@ -1,2 +1,6 @@
 rich
 ollama
+torch
+diffusers
+torchaudio
+TTS
